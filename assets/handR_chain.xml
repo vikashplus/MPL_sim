@@ -1,0 +1,98 @@
+<mujocoinclude>
+    <body name="right_wrist_rot_link" pos="-3.3683e-05 -0.18893 0">
+        <joint axis="0 1 0" limited="true" name="right_wrist_rot" pos="0 0 0" range="-1.483 1.483" damping="10"/>
+        <geom condim="6" contype="2" conaffinity="1" mesh="wrist_rot_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+        <body name="right_wrist_dev_link" pos="3.3683e-05 -0.044145 -5.6365e-05">
+            <joint axis="0 0 -1" limited="true" name="right_wrist_dev" pos="0 0 0" range="-0.524 0.524" damping="10"/>
+            <geom condim="6" contype="2" conaffinity="1" mesh="wrist_dev_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+            <body name="right_wrist_fe_link" pos="0.0001872 -0.03 0">
+                <joint axis="1 0 0" limited="true" name="right_wrist_fe" pos="0 0 0" range="-1 1" damping="10"/>
+                <geom condim="6" contype="2" conaffinity="1" mesh="wrist_fe_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                <body name="right_palm_link" pos="-0.000185 -0.08 -0.04" quat="0.707105 0 0 -0.707108">
+                    <geom condim="6" contype="2" conaffinity="1" mesh="palm_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                    
+                    <body name="right_index0_link" pos="-0.0142 0.035675 0.041012" quat="0.704415 -0.0616275 0.0616273 0.704417">
+                        <joint axis="0 0 -1" limited="true" name="right_index_ab_ad" pos="0 0 0" range="-0.345 0" damping="10"/>
+                        <geom condim="6" contype="2" conaffinity="1" mesh="index0_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                        <body name="right_index1_link" pos="6.26e-05 -0.018 0">
+                            <joint axis="1 0 0" limited="true" name="right_index_mcp" pos="0 0 0" range="-0.785 1.57" damping="10"/>
+                            <geom condim="6" contype="2" conaffinity="1" mesh="index1_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                            <body name="right_index2_link" pos="0.001086 -0.0435 0.0005">
+                                <joint axis="1 0 0" limited="true" name="right_index_pip" pos="0 0 0" range="0 1.72" damping="10"/>
+                                <geom condim="6" contype="2" conaffinity="1" mesh="index2_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                <body name="right_index3_link" pos="-0.000635 -0.0245 0">
+                                    <joint axis="1 0 0" limited="true" name="right_index_dip" pos="0 0 0" range="0 1.38" damping="10"/>
+                                    <geom condim="6" contype="2" conaffinity="1" mesh="index3_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                    <body name="right_middle0_link" pos="-0.0020986 0.012996 0.045446" quat="0.706432 0.0308433 0.0308435 0.706435">
+                        <joint axis="0 0 -1" name="right_middle_ab_ad" pos="0 0 0" damping="10"/>
+                        <geom condim="6" contype="2" conaffinity="1" mesh="middle0_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                        <body name="right_middle1_link" pos="6.26e-05 -0.018 0">
+                            <joint axis="1 0 0" limited="true" name="right_middle_mcp" pos="0 0 0" range="-0.785 1.57" damping="10"/>
+                            <geom condim="6" contype="2" conaffinity="1" mesh="middle1_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                            <body name="right_middle2_link" pos="0.001086 -0.0435 0.0005">
+                                <joint axis="1 0 0" limited="true" name="right_middle_pip" pos="0 0 0" range="0 1.73" damping="10"/>
+                                <geom condim="6" contype="2" conaffinity="1" mesh="middle2_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                <body name="right_middle3_link" pos="-0.000635 -0.0245 0">
+                                    <joint axis="1 0 0" limited="true" name="right_middle_dip" pos="0 0 0" range="0 1.38" damping="10"/>
+                                    <geom condim="6" contype="2" conaffinity="1" mesh="middle3_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                    <body name="right_ring0_link" pos="-0.0133 -0.0096828 0.041512" quat="0.704415 -0.0616275 0.0616273 0.704417">
+                        <joint axis="0 0 -1" limited="true" name="right_ring_ab_ad" pos="0 0 0" range="0 0.345" damping="10"/>
+                        <geom condim="6" contype="2" conaffinity="1" mesh="ring0_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                        <body name="right_ring1_link" pos="6.26e-05 -0.018 0">
+                            <joint axis="1 0 0" limited="true" name="right_ring_mcp" pos="0 0 0" range="-0.785 1.57" damping="10"/>
+                            <geom condim="6" contype="2" conaffinity="1" mesh="ring1_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                            <body name="right_ring2_link" pos="0.001086 -0.0435 0.0005">
+                                <joint axis="1 0 0" limited="true" name="right_ring_pip" pos="0 0 0" range="0 1.72" damping="10"/>
+                                <geom condim="6" contype="2" conaffinity="1" mesh="ring2_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                <body name="right_ring3_link" pos="-0.000635 -0.0245 0">
+                                    <joint axis="1 0 0" limited="true" name="right_ring_dip" pos="0 0 0" range="0 1.38" damping="10"/>
+                                    <geom condim="6" contype="2" conaffinity="1" mesh="ring3_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                    <body name="right_little0_link" pos="-0.0246 -0.030436 0.034361" quat="0.704415 0.0616275 -0.0616273 0.704417">
+                        <joint axis="0 0 -1" limited="true" name="right_little_ab_ad" pos="0 0 0" range="0 0.345" damping="10"/>
+                        <geom condim="6" contype="2" conaffinity="1" mesh="little0_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                        <body name="right_little1_link" pos="6.26e-05 -0.0179 0">
+                            <joint axis="1 0 0" limited="true" name="right_little_mcp" pos="0 0 0" range="-0.785 1.57" damping="10"/>
+                            <geom condim="6" contype="2" conaffinity="1" mesh="little1_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                            <body name="right_little2_link" pos="0.000578 -0.033 0.0005">
+                                <joint axis="1 0 0" limited="true" name="right_little_pip" pos="0 0 0" range="0 1.72" damping="10"/>
+                                <geom condim="6" contype="2" conaffinity="1" mesh="little2_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                <body name="right_little3_link" pos="-4.78e-05 -0.0175 0">
+                                    <joint axis="1 0 0" limited="true" name="right_little_dip" pos="0 0 0" range="0 1.38" damping="10"/>
+                                    <geom condim="6" contype="2" conaffinity="1" mesh="little3_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                    <body name="right_thumb0_link" pos="-0.059302 0.034168 0.029907" quat="0.793191 0.0439696 0.0143866 0.607214">
+                        <joint axis="0 1 0" limited="true" name="right_thumb_cmc_ab_ad" pos="0 0 0" range="0 2.07" damping="10"/>
+                        <geom condim="6" contype="2" conaffinity="1" mesh="thumb0_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                        <body name="right_thumb1_link" pos="0.020917 -0.00084 0.0014476">
+                            <joint axis="0 0 -1" limited="true" name="right_thumb_cmc_fe" pos="0 0 0" range="0 1.03" damping="10"/>
+                            <geom condim="6" contype="2" conaffinity="1" mesh="thumb1_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                            <body name="right_thumb2_link" pos="0.0335 0 -0.0007426">
+                                <joint axis="0 0 -1" limited="true" name="right_thumb_mcp" pos="0 0 0" range="0 1.03" damping="10"/>
+                                <geom condim="6" contype="2" conaffinity="1" mesh="thumb2_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                <body name="right_thumb3_link" pos="0.0335 0 0.0010854">
+                                    <joint axis="0 0 -1" limited="true" name="right_thumb_dip" pos="0 0 0" range="-0.819 1.28" damping="10"/>
+                                    <geom condim="6" contype="2" conaffinity="1" mesh="thumb3_linkR" rgba="0.792157 0.819608 0.933333 1" type="mesh" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </body>
+</mujocoinclude>

@@ -1,0 +1,56 @@
+<mujocoinclude>
+
+    <asset>
+        <mesh file="meshes/mplL/wrist_rot_link.stl" name="wrist_rot_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/wrist_dev_link.stl" name="wrist_dev_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/wrist_fe_link.stl" name="wrist_fe_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/palm_link.stl" name="palm_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/index0_link.stl" name="index0_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/index1_link.stl" name="index1_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/index2_link.stl" name="index2_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/index3_link.stl" name="index3_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/middle0_link.stl" name="middle0_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/middle1_link.stl" name="middle1_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/middle2_link.stl" name="middle2_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/middle3_link.stl" name="middle3_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/ring0_link.stl" name="ring0_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/ring1_link.stl" name="ring1_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/ring2_link.stl" name="ring2_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/ring3_link.stl" name="ring3_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/little0_link.stl" name="little0_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/little1_link.stl" name="little1_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/little2_link.stl" name="little2_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/little3_link.stl" name="little3_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/thumb0_link.stl" name="thumb0_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/thumb1_link.stl" name="thumb1_link"/>
+        <mesh file="meshes/mplL/thumb2_link.stl" name="thumb2_linkL" scale="1 1 -1"/>
+        <mesh file="meshes/mplL/thumb3_link.stl" name="thumb3_linkL" scale="1 1 -1"/>
+    </asset>
+
+    <actuator>
+        <motor gear="1" name="left_wrist_rot" joint="left_wrist_rot"/>
+        <motor gear="1" name="left_wrist_dev" joint="left_wrist_dev"/>
+        <motor gear="1" name="left_wrist_fe" joint="left_wrist_fe"/>
+        <motor gear="1" name="left_index_ab_ad" joint="left_index_ab_ad"/>
+        <motor gear="1" name="left_index_mcp" joint="left_index_mcp"/>
+        <motor gear="1" name="left_index_pip" joint="left_index_pip"/>
+        <motor gear="1" name="left_index_dip" joint="left_index_dip"/>
+        <motor gear="1" name="left_middle_ab_ad" joint="left_middle_ab_ad"/>
+        <motor gear="1" name="left_middle_mcp" joint="left_middle_mcp"/>
+        <motor gear="1" name="left_middle_pip" joint="left_middle_pip"/>
+        <motor gear="1" name="left_middle_dip" joint="left_middle_dip"/>
+        <motor gear="1" name="left_ring_ab_ad" joint="left_ring_ab_ad"/>
+        <motor gear="1" name="left_ring_mcp" joint="left_ring_mcp"/>
+        <motor gear="1" name="left_ring_pip" joint="left_ring_pip"/>
+        <motor gear="1" name="left_ring_dip" joint="left_ring_dip"/>
+        <motor gear="1" name="left_little_ab_ad" joint="left_little_ab_ad"/>
+        <motor gear="1" name="left_little_mcp" joint="left_little_mcp"/>
+        <motor gear="1" name="left_little_pip" joint="left_little_pip"/>
+        <motor gear="1" name="left_little_dip" joint="left_little_dip"/>
+        <motor gear="1" name="left_thumb_cmc_ab_ad" joint="left_thumb_cmc_ab_ad"/>
+        <motor gear="1" name="left_thumb_cmc_fe" joint="left_thumb_cmc_fe"/>
+        <motor gear="1" name="left_thumb_mcp" joint="left_thumb_mcp"/>
+        <motor gear="1" name="left_thumb_dip" joint="left_thumb_dip"/>
+    </actuator>
+
+</mujocoinclude>

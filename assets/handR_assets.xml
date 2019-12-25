@@ -1,0 +1,56 @@
+<mujocoinclude>
+
+    <asset>
+        <mesh file="meshes/mplR/wrist_rot_link.stl" name="wrist_rot_linkR"/>
+        <mesh file="meshes/mplR/wrist_dev_link.stl" name="wrist_dev_linkR"/>
+        <mesh file="meshes/mplR/wrist_fe_link.stl" name="wrist_fe_linkR"/>
+        <mesh file="meshes/mplR/palm_link.stl" name="palm_linkR"/>
+        <mesh file="meshes/mplR/index0_link.stl" name="index0_linkR"/>
+        <mesh file="meshes/mplR/index1_link.stl" name="index1_linkR"/>
+        <mesh file="meshes/mplR/index2_link.stl" name="index2_linkR"/>
+        <mesh file="meshes/mplR/index3_link.stl" name="index3_linkR"/>
+        <mesh file="meshes/mplR/middle0_link.stl" name="middle0_linkR"/>
+        <mesh file="meshes/mplR/middle1_link.stl" name="middle1_linkR"/>
+        <mesh file="meshes/mplR/middle2_link.stl" name="middle2_linkR"/>
+        <mesh file="meshes/mplR/middle3_link.stl" name="middle3_linkR"/>
+        <mesh file="meshes/mplR/ring0_link.stl" name="ring0_linkR"/>
+        <mesh file="meshes/mplR/ring1_link.stl" name="ring1_linkR"/>
+        <mesh file="meshes/mplR/ring2_link.stl" name="ring2_linkR"/>
+        <mesh file="meshes/mplR/ring3_link.stl" name="ring3_linkR"/>
+        <mesh file="meshes/mplR/little0_link.stl" name="little0_linkR"/>
+        <mesh file="meshes/mplR/little1_link.stl" name="little1_linkR"/>
+        <mesh file="meshes/mplR/little2_link.stl" name="little2_linkR"/>
+        <mesh file="meshes/mplR/little3_link.stl" name="little3_linkR"/>
+        <mesh file="meshes/mplR/thumb0_link.stl" name="thumb0_linkR"/>
+        <mesh file="meshes/mplR/thumb1_link.stl" name="thumb1_linkR"/>
+        <mesh file="meshes/mplR/thumb2_link.stl" name="thumb2_linkR"/>
+        <mesh file="meshes/mplR/thumb3_link.stl" name="thumb3_linkR"/>
+    </asset>
+
+    <actuator>
+        <motor gear="1" name="right_wrist_rot" joint="right_wrist_rot"/>
+        <motor gear="1" name="right_wrist_dev" joint="right_wrist_dev"/>
+        <motor gear="1" name="right_wrist_fe" joint="right_wrist_fe"/>
+        <motor gear="1" name="right_index_ab_ad" joint="right_index_ab_ad"/>
+        <motor gear="1" name="right_index_mcp" joint="right_index_mcp"/>
+        <motor gear="1" name="right_index_pip" joint="right_index_pip"/>
+        <motor gear="1" name="right_index_dip" joint="right_index_dip"/>
+        <motor gear="1" name="right_middle_ab_ad" joint="right_middle_ab_ad"/>
+        <motor gear="1" name="right_middle_mcp" joint="right_middle_mcp"/>
+        <motor gear="1" name="right_middle_pip" joint="right_middle_pip"/>
+        <motor gear="1" name="right_middle_dip" joint="right_middle_dip"/>
+        <motor gear="1" name="right_ring_ab_ad" joint="right_ring_ab_ad"/>
+        <motor gear="1" name="right_ring_mcp" joint="right_ring_mcp"/>
+        <motor gear="1" name="right_ring_pip" joint="right_ring_pip"/>
+        <motor gear="1" name="right_ring_dip" joint="right_ring_dip"/>
+        <motor gear="1" name="right_little_ab_ad" joint="right_little_ab_ad"/>
+        <motor gear="1" name="right_little_mcp" joint="right_little_mcp"/>
+        <motor gear="1" name="right_little_pip" joint="right_little_pip"/>
+        <motor gear="1" name="right_little_dip" joint="right_little_dip"/>
+        <motor gear="1" name="right_thumb_cmc_ab_ad" joint="right_thumb_cmc_ab_ad"/>
+        <motor gear="1" name="right_thumb_cmc_fe" joint="right_thumb_cmc_fe"/>
+        <motor gear="1" name="right_thumb_mcp" joint="right_thumb_mcp"/>
+        <motor gear="1" name="right_thumb_dip" joint="right_thumb_dip"/>
+    </actuator>
+
+</mujocoinclude>
