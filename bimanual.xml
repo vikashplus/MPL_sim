@@ -1,0 +1,155 @@
+<!-- =========== Copyright | Vikash Kumar | vikashplus@gmail.com ==========================
+    Model       :: MPL
+    Mujoco      :: Advanced physics simulation engine
+        Source      : www.roboti.us
+        Version     : 2.00
+        Released    : 1Oct"18
+    Author      :: Vikash Kumar
+        Contacts    : vikashplus@gmail.com
+        Last edits  : 25Dec"19
+    
+Copyright 2018 Vikash Kumar: Licensed under Apache License, Version 2.0 (the "License")
+
+You may not use this file except in compliance with the License. You may obtain a copy of 
+the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law
+or agreed to in writing, software distributed under the License is distributed on an "AS IS"
+BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
+for the specific language governing permissions and limitations under the License.
+============================================================================================= -->
+
+<?xml version="1.0" ?>
+<mujoco model="bimanual">
+    <compiler angle="radian" meshdir="./" texturedir='scenes/' convexhull="false"/>
+    <size nconmax="1000" njmax="5000"/>
+    <option timestep="0.002"/>
+    
+    <default>
+        <default class="arm">
+            <geom condim="3" contype="2" conaffinity="1" rgba="0.792157 0.819608 0.933333 1" type="mesh"/>
+            <joint limited="true" damping="10"/>
+            <position kp="100" ctrllimited="true"/>
+        </default>
+        <default class="hand">
+            <geom condim="6" contype="2" conaffinity="1"  rgba="0.8 0.8 0.9 1" type="mesh"/>
+            <joint damping="6" limited="true"/>
+            <position kp="10" ctrllimited="true"/>
+        </default>
+    </default>
+
+    <asset>
+        <mesh file="meshes/hdm/torso_yaw_axis_assembly_bottom-1_cvx.stl" name="torso_yaw_axis_assembly_bottom-1" scale="0.001 0.001 0.001"/>
+        <mesh file="meshes/hdm/torso_yaw_axis_assembly_top-2_cvx.stl" name="torso_yaw_axis_assembly_top-2" scale="0.001 0.001 0.001"/>
+        <mesh file="meshes/hdm/roll_slip_yoke_assembly-3_cvx.stl" name="roll_slip_yoke_assembly-3" scale="0.001 0.001 0.001"/>
+        <mesh file="meshes/hdm/roll_slip_yoke_assembly_top-4_cvx.stl" name="roll_slip_yoke_assembly_top-4" scale="0.001 0.001 0.001"/>
+        <mesh file="meshes/hdm/upper_torso_assembly-5_cvx.stl" name="upper_torso_assembly-5" scale="0.001 0.001 0.001"/>
+
+        <mesh file="meshes/mplR/base_link-cvx.stl" name="base_linkR"/>
+        <mesh file="meshes/mplR/shoulder_link-cvx.stl" name="shoulder_linkR"/>
+        <mesh file="meshes/mplR/humerus_upper_link-cvx.stl" name="humerus_upper_linkR"/>
+        <mesh file="meshes/mplR/humerus_lower_top_link-cvx.stl" name="humerus_lower_top_linkR"/>
+        <mesh file="meshes/mplR/humerus_lower_bottom_link-cvx.stl" name="humerus_lower_bottom_linkR"/>
+        <mesh file="meshes/mplR/forearm_link-cvx.stl" name="forearm_linkR"/>
+
+        <mesh file="meshes/mplL/base_link-cvx.stl" name="base_linkL"/>
+        <mesh file="meshes/mplL/shoulder_link-cvx.stl" name="shoulder_linkL"/>
+        <mesh file="meshes/mplL/humerus_upper_link-cvx.stl" name="humerus_upper_linkL"/>
+        <mesh file="meshes/mplL/humerus_lower_top_link-cvx.stl" name="humerus_lower_top_linkL"/>
+        <mesh file="meshes/mplL/humerus_lower_bottom_link-cvx.stl" name="humerus_lower_bottom_linkL"/>
+        <mesh file="meshes/mplL/forearm_link-cvx.stl" name="forearm_linkL"/>
+    </asset>
+
+    <actuator>
+        <position class="arm" kp="100" name="torso_yaw" joint="torso_yaw" ctrlrange="-1.57 1.57"/>
+        <position class="arm" kp="100" name="torso_pitch_master" joint="torso_pitch_master" ctrlrange="-.785 .785"/>
+        <position class="arm" kp="100" name="torso_roll" joint="torso_roll" ctrlrange="-.785 .785"/>
+        <position class="arm" kp="50" name="Rshoulder_fe" joint="right_shoulder_fe" ctrlrange="-0.611 2.792"/>
+        <position class="arm" kp="50" name="Rshoulder_abad" joint="right_shoulder_abad" ctrlrange="-2.792 0"/>
+        <position class="arm" kp="50" name="Rhumeral_rot" joint="right_humeral_rot" ctrlrange="-0.524 1.483"/>
+        <position class="arm" kp="50" name="Relbow" joint="right_elbow" ctrlrange="0.05 2.356"/>
+        <position class="arm" kp="50" name="Lshoulder_fe" joint="left_shoulder_fe" ctrlrange="-0.611 2.792"/>
+        <position class="arm" kp="50" name="Lshoulder_abad" joint="left_shoulder_abad" ctrlrange="-2.792 0"/>
+        <position class="arm" kp="50" name="Lhumeral_rot" joint="left_humeral_rot" ctrlrange="-0.524 1.483"/>
+        <position class="arm" kp="50" name="Lelbow" joint="left_elbow" ctrlrange="0.05 2.356"/>
+    </actuator>
+
+    <include file='scenes/basic_scene.xml'/>
+    <include file='assets/simpleHandR_assets.xml'/>
+    <include file='assets/simpleHandL_assets.xml'/>
+
+    <worldbody>
+
+        <!-- TORSO -->
+        <body name="torso_yaw_axis_bottom" pos="0 0 0.2" childclass="arm">
+            <geom mesh="torso_yaw_axis_assembly_bottom-1"/>
+            <body name="torso_yaw_axis_top" pos="0 0 0.0247">
+                <joint axis="0 0 1" name="torso_yaw" range="-1.57 1.57" damping="50"/>
+                <geom mesh="torso_yaw_axis_assembly_top-2"/>
+                <body name="roll_slip_yoke_assembly" pos="-0.0001 0 0.102499" quat="0 -0.707107 0 0.707107">
+                    <joint axis="0 0 -1" name="torso_pitch_master" range="-.785 .785" damping="50"/>
+                    <geom mesh="roll_slip_yoke_assembly-3"/>
+                    <body name="roll_slip_yoke_assembly_top" pos="-0.08 0 0.0001" quat="0.707107 0.707107 0 0">
+                        <joint axis="0 0 -1" name="torso_roll" range="-.785 .785" damping="50"/>
+                        <geom mesh="roll_slip_yoke_assembly_top-4"/>
+                        <body name="upper_torso" pos="-0.058 0 0" quat="0.707107 0 0.707107 0">
+                            <geom mesh="upper_torso_assembly-5"/>
+                            
+                            <!-- RIGHT ARM -->
+                            <body name="right_mpl_attach" pos="0 0.19973 -0.30578" quat="0.707107 -0.707107 0 0">
+                                <geom mesh="base_linkR"/>
+                                <body name="right_shoulder_link" pos="0 0 0">
+                                    <joint axis="0 0 1" name="right_shoulder_fe" range="-0.611 2.792"/>
+                                    <geom mesh="shoulder_linkR"/>
+                                    <body name="right_humerus_upper_link" pos="0.0016428 0 0">
+                                        <joint axis="1 0 0" name="right_shoulder_abad" range="-2.792 0"/>
+                                        <geom mesh="humerus_upper_linkR"/>
+                                        <body name="right_humerus_lower_link" pos="-0.0016397 -0.15007 0.013891">
+                                            <joint axis="0 1 0" name="right_humeral_rot" range="-0.524 1.483"/>
+                                            <geom mesh="humerus_lower_top_linkR"/>
+                                            <geom mesh="humerus_lower_bottom_linkR"/>
+                                            <body name="right_forearm_link" pos="0.01 -0.14441 0.0006524">
+                                                <joint axis="0 0 1" name="right_elbow" range="0.05 2.356"/>
+                                                <geom mesh="forearm_linkR"/>
+                                                
+                                                <!-- RIGHT HAND -->
+                                                <include file="assets/simpleHandR_chain.xml"/>
+                                                
+                                            </body>
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+
+                            <!-- LEFT ARM -->
+                            <body name="left_mpl_attach" pos="0 -0.19973 -0.30578" quat="0.707107 -0.707107 0 0">
+                                <geom mesh="base_linkL"/>
+                                <body name="left_shoulder_link" pos="0 0 0">
+                                    <joint axis="0 0 1" name="left_shoulder_fe" range="-0.611 2.792"/>
+                                    <geom mesh="shoulder_linkL"/>
+                                    <body name="left_humerus_upper_link" pos="0.0016428 0 0">
+                                        <joint axis="-1 0 0" name="left_shoulder_abad" range="-2.792 0"/>
+                                        <geom mesh="humerus_upper_linkL"/>
+                                        <body name="left_humerus_lower_link" pos="-0.0016397 -0.15007 -0.013891">
+                                            <joint axis="0 -1 0" name="left_humeral_rot" range="-0.524 1.483"/>
+                                            <geom mesh="humerus_lower_top_linkL"/>
+                                            <geom mesh="humerus_lower_bottom_linkL"/>
+                                            <body name="left_forearm_link" pos="0.01 -0.14441 -0.0006524">
+                                                <joint axis="0 0 1" name="left_elbow" range="0.05 2.356"/>
+                                                <geom mesh="forearm_linkL"/>
+                                                
+                                                <!-- LEFT HAND -->
+                                                <include file="assets/simpleHandL_chain.xml"/>
+
+                                            </body>
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+
+</mujoco>
