@@ -25,15 +25,15 @@ for the specific language governing permissions and limitations under the Licens
     
     <default>
         <default class="arm">
-            <geom condim="3" contype="2" conaffinity="1" rgba="0.792157 0.819608 0.933333 1" type="mesh"/>
+            <geom condim="3" contype="2" conaffinity="1" type="mesh" material="geomMat"/>
             <joint limited="true" damping="10"/>
             <position kp="100" ctrllimited="true"/>
             <default class="arm_dark">
-                <geom rgba=".2 .2 .2 1"/>
+                <geom rgba=".1 .13 .13 1"/>
             </default>
         </default>
         <default class="hand">
-            <geom condim="6" contype="2" conaffinity="1"  rgba="0.8 0.8 0.9 1" type="mesh"/>
+            <geom condim="6" contype="2" conaffinity="1"  rgba=".9 .9 .9 1" type="mesh" material="geomMat"/>
             <joint damping="6" limited="true"/>
             <position kp="10" ctrllimited="true"/>
         </default>
@@ -59,6 +59,9 @@ for the specific language governing permissions and limitations under the Licens
         <mesh file="meshes/mplL/humerus_lower_top_link-cvx.stl" name="humerus_lower_top_linkL"/>
         <mesh file="meshes/mplL/humerus_lower_bottom_link-cvx.stl" name="humerus_lower_bottom_linkL"/>
         <mesh file="meshes/mplL/forearm_link-cvx.stl" name="forearm_linkL"/>
+
+        <texture name="texgeom" type="cube" builtin="flat" rgb1=".85 .85 0.86" rgb2=".85 .85 0.86"  mark="random" markrgb=".2 .2 .3" random="0.25" width="512" height="512"/>
+        <material name="geomMat" texture="texgeom" specular="0.75" shininess=".03"/>
     </asset>
 
     <actuator>
