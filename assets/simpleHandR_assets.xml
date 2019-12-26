@@ -19,6 +19,15 @@ for the specific language governing permissions and limitations under the Licens
 
 <mujocoinclude>
 
+    <default>
+        <default class="MPL_hand">
+            <geom condim="6" contype="2" conaffinity="1"  rgba=".9 .9 .9 1" type="mesh" material="geomMat"/>
+            <site type="sphere" size="0.005" group="0"/>
+            <joint damping="6" limited="true"/>
+            <position kp="10" ctrllimited="true"/>
+        </default>
+    </default>
+
     <asset>
         <mesh file="meshes/mplR/wrist_rot_link-cvx.stl" name="wrist_rot_linkR"/>
         <mesh file="meshes/mplR/wrist_dev_link-cvx.stl" name="wrist_dev_linkR"/>
@@ -27,10 +36,10 @@ for the specific language governing permissions and limitations under the Licens
     </asset>
 
     <actuator>
-        <position class="hand" name="Rwrist_rot" joint="right_wrist_rot" ctrlrange="-1.483 1.483"/>
-        <position class="hand" name="Rwrist_dev" joint="right_wrist_dev" ctrlrange="-0.524 0.524"/>
-        <position class="hand" name="Rwrist_fe" joint="right_wrist_fe" ctrlrange="-1 1"/>
-        <position class="hand" name="Rfingers" joint="right_fingers" ctrlrange="0 1.57"/>
+        <position class="MPL_hand" name="Rwrist_rot" joint="right_wrist_rot" ctrlrange="-1.483 1.483"/>
+        <position class="MPL_hand" name="Rwrist_dev" joint="right_wrist_dev" ctrlrange="-0.524 0.524"/>
+        <position class="MPL_hand" name="Rwrist_fe" joint="right_wrist_fe" ctrlrange="-1 1"/>
+        <position class="MPL_hand" name="Rfingers" joint="right_fingers" ctrlrange="0 1.57"/>
     </actuator>
 
 </mujocoinclude>

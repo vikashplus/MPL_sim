@@ -17,20 +17,18 @@ BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
 for the specific language governing permissions and limitations under the License.
 ============================================================================================= -->
 
-<mujocoinclude>
+<?xml version="1.0" ?>
+<mujoco model="sally">
     
-    <asset>
-        <mesh file="meshes/mplL/wrist_rot_link-cvx.stl" name="wrist_rot_linkL" scale="1 1 1"/>
-        <mesh file="meshes/mplL/wrist_dev_link-cvx.stl" name="wrist_dev_linkL" scale="1 1 1"/>
-        <mesh file="meshes/mplL/wrist_fe_link-cvx.stl" name="wrist_fe_linkL" scale="1 1 1"/>
-        <mesh file="meshes/mplL/palm_link-cvx.stl" name="palm_linkL" scale="1 1 1"/>
-    </asset>
+    <compiler meshdir="./../" texturedir='../scenes/'/>
 
-    <actuator>
-        <position class="MPL_hand" name="Lwrist_rotL" joint="left_wrist_rot" ctrlrange="-1.483 1.483"/>
-        <position class="MPL_hand" name="Lwrist_devL" joint="left_wrist_dev" ctrlrange="-0.524 0.524"/>
-        <position class="MPL_hand" name="Lwrist_feL" joint="left_wrist_fe" ctrlrange="-1 1"/>
-        <position class="MPL_hand" name="Lfingers" joint="left_fingers" ctrlrange="0 1.57"/>
-    </actuator>
+    <include file='../scenes/basic_scene.xml'/>
+    <include file='../assets/arms_assets.xml'/>
+    <include file='../assets/simpleHandR_assets.xml'/>
+    <include file='../assets/simpleHandL_assets.xml'/>
 
-</mujocoinclude>
+    <worldbody>
+        <include file='../assets/arms_chain.xml'/> <!-- hands are configures here -->
+    </worldbody>
+
+</mujoco>
