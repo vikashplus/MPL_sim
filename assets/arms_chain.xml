@@ -1,7 +1,7 @@
 <mujocoinclude>
 
     <!-- TORSO -->
-        <body name="torso_yaw_axis_bottom" pos="0 0 0.2" childclass="MPL_arm">
+        <body name="torso_yaw_axis_bottom" pos="0 0 0.2" euler="0 0 3.14" childclass="MPL_arm">
             <geom mesh="torso_yaw_axis_assembly_bottom-1"/>
             <body name="torso_yaw_axis_top" pos="0 0 0.0247">
                 <joint axis="0 0 1" name="torso_yaw" range="-1.57 1.57" damping="50"/>
@@ -14,6 +14,7 @@
                         <geom mesh="roll_slip_yoke_assembly_top-4"/>
                         <body name="upper_torso" pos="-0.058 0 0" quat="0.707107 0 0.707107 0">
                             <geom mesh="upper_torso_assembly-5" class="MPL_arm_dark"/>
+                            <geom type="cylinder" size=".05 .005" pos=".035 0 -.25" euler="0 1.57 0"/>
                             
                             <!-- RIGHT ARM -->
                             <body name="right_mpl_attach" pos="0 0.19973 -0.30578" quat="0.707107 -0.707107 0 0">

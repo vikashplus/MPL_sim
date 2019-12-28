@@ -29,7 +29,7 @@ for the specific language governing permissions and limitations under the Licens
                 <geom mesh="wrist_fe_linkR"/>
                 <body name="right_palm_link" pos="-0.000185 -0.08 -0.04" quat="0.707105 0 0 -0.707108">
                     <geom mesh="palm_linkR"/>
-                    <site name="Rgrasp"/>
+                    <site name="right_grasp"/>
                     
                     <body name="right_fingers">
                         <joint axis="0 1 0" name="right_fingers" pos="0 0 0.041012" range="0 1.57"/>
