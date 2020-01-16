@@ -42,16 +42,16 @@
 
     <actuator>
         <position class="MPL_arm" kp="100" name="torso_yaw" joint="torso_yaw" ctrlrange="-1.57 1.57"/>
-        <position class="MPL_arm" kp="100" name="torso_pitch_master" joint="torso_pitch_master" ctrlrange="-.785 .785"/>
+        <position class="MPL_arm" kp="100" name="torso_pitch" joint="torso_pitch" ctrlrange="-.785 .785"/>
         <position class="MPL_arm" kp="100" name="torso_roll" joint="torso_roll" ctrlrange="-.785 .785"/>
-        <position class="MPL_arm" kp="50" name="Rshoulder_fe" joint="right_shoulder_fe" ctrlrange="-0.611 2.792"/>
-        <position class="MPL_arm" kp="50" name="Rshoulder_abad" joint="right_shoulder_abad" ctrlrange="-2.792 0"/>
-        <position class="MPL_arm" kp="50" name="Rhumeral_rot" joint="right_humeral_rot" ctrlrange="-0.524 1.483"/>
-        <position class="MPL_arm" kp="50" name="Relbow" joint="right_elbow" ctrlrange="0.05 2.356"/>
-        <position class="MPL_arm" kp="50" name="Lshoulder_fe" joint="left_shoulder_fe" ctrlrange="-0.611 2.792"/>
-        <position class="MPL_arm" kp="50" name="Lshoulder_abad" joint="left_shoulder_abad" ctrlrange="-2.792 0"/>
-        <position class="MPL_arm" kp="50" name="Lhumeral_rot" joint="left_humeral_rot" ctrlrange="-0.524 1.483"/>
-        <position class="MPL_arm" kp="50" name="Lelbow" joint="left_elbow" ctrlrange="0.05 2.356"/>
+        <position class="MPL_arm" kp="50" name="Rshoulder_fe" joint="Rshoulder_fe" ctrlrange="-0.611 2.792"/>
+        <position class="MPL_arm" kp="50" name="Rshoulder_abad" joint="Rshoulder_abad" ctrlrange="-2.792 0"/>
+        <position class="MPL_arm" kp="50" name="Rhumeral_rot" joint="Rhumeral_rot" ctrlrange="-0.524 1.483"/>
+        <position class="MPL_arm" kp="50" name="Relbow" joint="Relbow" ctrlrange="0.05 2.356"/>
+        <position class="MPL_arm" kp="50" name="Lshoulder_fe" joint="Lshoulder_fe" ctrlrange="-0.611 2.792"/>
+        <position class="MPL_arm" kp="50" name="Lshoulder_abad" joint="Lshoulder_abad" ctrlrange="-2.792 0"/>
+        <position class="MPL_arm" kp="50" name="Lhumeral_rot" joint="Lhumeral_rot" ctrlrange="-0.524 1.483"/>
+        <position class="MPL_arm" kp="50" name="Lelbow" joint="Lelbow" ctrlrange="0.05 2.356"/>
     </actuator>
 
 

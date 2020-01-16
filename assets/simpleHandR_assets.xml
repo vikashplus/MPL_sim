@@ -36,10 +36,10 @@ for the specific language governing permissions and limitations under the Licens
     </asset>
 
     <actuator>
-        <position class="MPL_hand" name="Rwrist_rot" joint="right_wrist_rot" ctrlrange="-1.483 1.483"/>
-        <position class="MPL_hand" name="Rwrist_dev" joint="right_wrist_dev" ctrlrange="-0.524 0.524"/>
-        <position class="MPL_hand" name="Rwrist_fe" joint="right_wrist_fe" ctrlrange="-1 1"/>
-        <position class="MPL_hand" name="Rfingers" joint="right_fingers" ctrlrange="0 1.57"/>
+        <position class="MPL_hand" name="Rwrist_rot" joint="Rwrist_rot" ctrlrange="-1.483 1.483"/>
+        <position class="MPL_hand" name="Rwrist_dev" joint="Rwrist_dev" ctrlrange="-0.524 0.524"/>
+        <position class="MPL_hand" name="Rwrist_fe" joint="Rwrist_fe" ctrlrange="-1 1"/>
+        <position class="MPL_hand" name="Rfingers" joint="Rfingers" ctrlrange="0 1.57"/>
     </actuator>
 
 </mujocoinclude>
