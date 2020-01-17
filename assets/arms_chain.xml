@@ -7,7 +7,7 @@
                 <joint axis="0 0 1" name="torso_yaw" range="-1.57 1.57" damping="50"/>
                 <geom mesh="torso_yaw_axis_assembly_top-2"/>
                 <body name="roll_slip_yoke_assembly" pos="-0.0001 0 0.102499" quat="0 -0.707107 0 0.707107">
-                    <joint axis="0 0 -1" name="torso_pitch_master" range="-.785 .785" damping="50"/>
+                    <joint axis="0 0 -1" name="torso_pitch" range="-.785 .785" damping="50"/>
                     <geom mesh="roll_slip_yoke_assembly-3" class="MPL_arm_dark"/>
                     <body name="roll_slip_yoke_assembly_top" pos="-0.08 0 0.0001" quat="0.707107 0.707107 0 0">
                         <joint axis="0 0 -1" name="torso_roll" range="-.785 .785" damping="50"/>
@@ -17,20 +17,20 @@
                             <geom type="cylinder" size=".05 .005" pos=".035 0 -.25" euler="0 1.57 0"/>
                             
                             <!-- RIGHT ARM -->
-                            <body name="right_mpl_attach" pos="0 0.19973 -0.30578" quat="0.707107 -0.707107 0 0">
+                            <body name="Rmpl_attach" pos="0 0.19973 -0.30578" quat="0.707107 -0.707107 0 0">
                                 <geom mesh="base_linkR"/>
-                                <body name="right_shoulder_link" pos="0 0 0">
-                                    <joint axis="0 0 1" name="right_shoulder_fe" range="-0.611 2.792"/>
+                                <body name="Rshoulder_link" pos="0 0 0">
+                                    <joint axis="0 0 1" name="Rshoulder_fe" range="-0.611 2.792"/>
                                     <geom mesh="shoulder_linkR"/>
-                                    <body name="right_humerus_upper_link" pos="0.0016428 0 0">
-                                        <joint axis="1 0 0" name="right_shoulder_abad" range="-2.792 0"/>
+                                    <body name="Rhumerus_upper_link" pos="0.0016428 0 0">
+                                        <joint axis="1 0 0" name="Rshoulder_abad" range="-2.792 0"/>
                                         <geom mesh="humerus_upper_linkR" class="MPL_arm_dark"/>
-                                        <body name="right_humerus_lower_link" pos="-0.0016397 -0.15007 0.013891">
-                                            <joint axis="0 1 0" name="right_humeral_rot" range="-0.524 1.483"/>
+                                        <body name="Rhumerus_lower_link" pos="-0.0016397 -0.15007 0.013891">
+                                            <joint axis="0 1 0" name="Rhumeral_rot" range="-0.524 1.483"/>
                                             <geom mesh="humerus_lower_top_linkR"/>
                                             <geom mesh="humerus_lower_bottom_linkR"/>
-                                            <body name="right_forearm_link" pos="0.01 -0.14441 0.0006524">
-                                                <joint axis="0 0 1" name="right_elbow" range="0.05 2.356"/>
+                                            <body name="Rforearm_link" pos="0.01 -0.14441 0.0006524">
+                                                <joint axis="0 0 1" name="Relbow" range="0.05 2.356"/>
                                                 <geom mesh="forearm_linkR" class="MPL_arm_dark"/>
                                                 
                                                 <!-- RIGHT HAND -->
@@ -43,20 +43,20 @@
                             </body>
 
                             <!-- LEFT ARM -->
-                            <body name="left_mpl_attach" pos="0 -0.19973 -0.30578" quat="0.707107 -0.707107 0 0">
+                            <body name="Lmpl_attach" pos="0 -0.19973 -0.30578" quat="0.707107 -0.707107 0 0">
                                 <geom mesh="base_linkL"/>
-                                <body name="left_shoulder_link" pos="0 0 0">
-                                    <joint axis="0 0 1" name="left_shoulder_fe" range="-0.611 2.792"/>
+                                <body name="Lshoulder_link" pos="0 0 0">
+                                    <joint axis="0 0 1" name="Lshoulder_fe" range="-0.611 2.792"/>
                                     <geom mesh="shoulder_linkL"/>
-                                    <body name="left_humerus_upper_link" pos="0.0016428 0 0">
-                                        <joint axis="-1 0 0" name="left_shoulder_abad" range="-2.792 0"/>
+                                    <body name="Lhumerus_upper_link" pos="0.0016428 0 0">
+                                        <joint axis="-1 0 0" name="Lshoulder_abad" range="-2.792 0"/>
                                         <geom mesh="humerus_upper_linkL" class="MPL_arm_dark"/>
-                                        <body name="left_humerus_lower_link" pos="-0.0016397 -0.15007 -0.013891">
-                                            <joint axis="0 -1 0" name="left_humeral_rot" range="-0.524 1.483"/>
+                                        <body name="Lhumerus_lower_link" pos="-0.0016397 -0.15007 -0.013891">
+                                            <joint axis="0 -1 0" name="Lhumeral_rot" range="-0.524 1.483"/>
                                             <geom mesh="humerus_lower_top_linkL"/>
                                             <geom mesh="humerus_lower_bottom_linkL"/>
-                                            <body name="left_forearm_link" pos="0.01 -0.14441 -0.0006524">
-                                                <joint axis="0 0 1" name="left_elbow" range="0.05 2.356"/>
+                                            <body name="Lforearm_link" pos="0.01 -0.14441 -0.0006524">
+                                                <joint axis="0 0 1" name="Lelbow" range="0.05 2.356"/>
                                                 <geom mesh="forearm_linkL" class="MPL_arm_dark"/>
                                                 
                                                 <!-- LEFT HAND -->

@@ -18,21 +18,21 @@ for the specific language governing permissions and limitations under the Licens
 ============================================================================================= -->
 
 <mujocoinclude>
-    <body name="right_wrist_rot_link" pos="-3.3683e-05 -0.18893 0" childclass="MPL_hand">
-        <joint axis="0 1 0" name="right_wrist_rot" range="-1.483 1.483"/>
+    <body name="Rwrist_rot_link" pos="-3.3683e-05 -0.18893 0" childclass="MPL_hand">
+        <joint axis="0 1 0" name="Rwrist_rot" range="-1.483 1.483"/>
         <geom mesh="wrist_rot_linkR"/>
-        <body name="right_wrist_dev_link" pos="3.3683e-05 -0.044145 -5.6365e-05">
-            <joint axis="0 0 -1" name="right_wrist_dev" range="-0.524 0.524"/>
+        <body name="Rwrist_dev_link" pos="3.3683e-05 -0.044145 -5.6365e-05">
+            <joint axis="0 0 -1" name="Rwrist_dev" range="-0.524 0.524"/>
             <geom mesh="wrist_dev_linkR"/>
-            <body name="right_wrist_fe_link" pos="0.0001872 -0.03 0">
-                <joint axis="1 0 0" name="right_wrist_fe" range="-1 1"/>
+            <body name="Rwrist_fe_link" pos="0.0001872 -0.03 0">
+                <joint axis="1 0 0" name="Rwrist_fe" range="-1 1"/>
                 <geom mesh="wrist_fe_linkR"/>
-                <body name="right_palm_link" pos="-0.000185 -0.08 -0.04" quat="0.707105 0 0 -0.707108">
+                <body name="Rpalm_link" pos="-0.000185 -0.08 -0.04" quat="0.707105 0 0 -0.707108">
                     <geom mesh="palm_linkR"/>
-                    <site name="right_grasp"/>
+                    <site name="Rgrasp"/>
                     
-                    <body name="right_fingers">
-                        <joint axis="0 1 0" name="right_fingers" pos="0 0 0.041012" range="0 1.57"/>
+                    <body name="Rfingers">
+                        <joint axis="0 1 0" name="Rfingers" pos="0 0 0.041012" range="0 1.57"/>
                         <geom type="capsule" size=".008 .045" pos="0.042 0.035675 0.041012" euler="0 1.57 0"/>
                         <geom type="capsule" size=".009 .045" pos="0.052 0.012996 0.045446" euler="0 1.57 0"/>
                         <geom type="capsule" size=".008 .045" pos="0.042 -0.0096828 0.041512" euler="0 1.57 0"/>
