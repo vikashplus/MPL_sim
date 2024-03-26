@@ -1,12 +1,12 @@
 <mujocoinclude>
-    
+
     <compiler angle="radian" meshdir="./../" texturedir='../scenes/' convexhull="false"/>
     <size nconmax="1000" njmax="5000"/>
     <option timestep="0.002"/>
-    
+
     <default>
         <default class="MPL_arm">
-            <geom condim="3" contype="2" conaffinity="1" type="mesh" material="geomMat"/>
+            <geom condim="3" contype="2" conaffinity="1" type="mesh" material="matmetal"/>
             <joint limited="true" damping="10"/>
             <position kp="100" ctrllimited="true"/>
             <default class="MPL_arm_dark">
@@ -36,8 +36,8 @@
         <mesh file="meshes/mplL/humerus_lower_bottom_link-cvx.stl" name="humerus_lower_bottom_linkL"/>
         <mesh file="meshes/mplL/forearm_link-cvx.stl" name="forearm_linkL"/>
 
-        <texture name="texgeom" type="cube" builtin="flat" rgb1=".85 .85 0.86" rgb2=".85 .85 0.86"  mark="random" markrgb=".2 .2 .3" random="0.25" width="512" height="512"/>
-        <material name="geomMat" texture="texgeom" specular="0.75" shininess=".03"/>
+        <texture name="texmetal" type="cube" builtin="flat" rgb1=".85 .85 0.86" rgb2=".85 .85 0.86"  mark="random" markrgb=".2 .2 .3" random="0.25" width="512" height="512"/>
+        <material name="matmetal" texture="texmetal" specular="0.75" shininess=".03"/>
     </asset>
 
     <actuator>
