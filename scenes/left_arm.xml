@@ -22,12 +22,13 @@ for the specific language governing permissions and limitations under the Licens
     <compiler meshdir="./../" texturedir='../scenes/'/>
 
     <include file='../scenes/basic_scene.xml'/>
-    <include file='../assets/arms_assets.xml'/>
-    <include file='../assets/simpleHandR_assets.xml'/>
-    <include file='../assets/simpleHandL_assets.xml'/>
+    <include file='../assets/left_arm_assets.xml'/>
+    <include file='../assets/handL_assets.xml'/>
 
     <worldbody>
-        <include file='../assets/arms_chain.xml'/> <!-- hands are configured here -->
+        <body pos="0 0 1">
+            <include file='../assets/left_arm_chain.xml'/>
+        </body>
     </worldbody>
 
 </mujoco>
